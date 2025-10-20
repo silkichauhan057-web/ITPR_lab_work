@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class Cylinder {
+    double radius, height;
+
+    // Constructor
+    Cylinder(double r, double h) {
+        radius = r;
+        height = h;
+    }
+
+    void calculate() {
+        double curvedSurfaceArea = 2 * Math.PI * radius * height;
+        double totalSurfaceArea = 2 * Math.PI * radius * (radius + height);
+        double volume = Math.PI * radius * radius * height;
+
+        System.out.println("Curved Surface Area = " + curvedSurfaceArea);
+        System.out.println("Total Surface Area = " + totalSurfaceArea);
+        System.out.println("Volume = " + volume);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter radius of cylinder: ");
+        double r = sc.nextDouble();
+
+        System.out.print("Enter height of cylinder: ");
+        double h = sc.nextDouble();
+
+        Cylinder obj = new Cylinder(r, h);
+        obj.calculate();
+
+
+    }
+}
