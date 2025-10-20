@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class FactorialNumber {
+
+    // Method to calculate factorial
+    public static long findFactorial(int n) {
+        long fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        return fact;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        long factorial = findFactorial(num);
+        System.out.println("Factorial of " + num + " is: " + factorial);
+    }
+}
