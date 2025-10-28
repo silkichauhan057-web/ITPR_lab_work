@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class ArrCountPosNegNum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] numbers = new int[10];
+        int positiveCount = 0, negativeCount = 0;
+
+        // Input 10 numbers
+        System.out.println("Enter 10 numbers:");
+        for (int i = 0; i < 10; i++) {
+            numbers[i] = sc.nextInt();
+
+            if (numbers[i] > 0) {
+                positiveCount++;
+            } else if (numbers[i] < 0) {
+                negativeCount++;
+            }
+        }
+
+        // Display results
+        System.out.println("\nTotal Positive Numbers = " + positiveCount);
+        System.out.println("Total Negative Numbers = " + negativeCount);
+
+        sc.close();
+    }
+}
